@@ -4,5 +4,4 @@ dist/
 npm-debug.log
 .vscode/
 
-src/data/kattog.json
 ua-geo-set-*.tgz

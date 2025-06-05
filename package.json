@@ -1,6 +1,6 @@
 {
   "name": "ua-geo-set",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "UaGeoSet – чиста TypeScript-бібліотека з адміністративно-географічними даними України (регіони, райони, місця з координатами).",
   "keywords": [
     "ukraine",
@@ -19,9 +19,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "src/lib/",
-    "src/data/kattog.json",
-    "dist/**/*",
+    "dist/",
+    "data/kattog.json",
     "README.md",
     "CHANGELOG.md",
     "LICENSE"

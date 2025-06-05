@@ -1,5 +1,3 @@
-// scripts/convert-kattog.ts
-
 import * as fs from "fs";
 import * as path from "path";
 
@@ -50,9 +48,9 @@ interface Output {
  *
  * Document source was taken from: https://github.com/kaminarifox/katottg-json
  */
-const INPUT_PATH = path.resolve(__dirname, "../src/data/raw-kattog.json");
+const INPUT_PATH = path.resolve(__dirname, "../data/raw-kattog.json");
 
-const OUTPUT_PATH = path.resolve(__dirname, "../src/data/kattog.json");
+const OUTPUT_PATH = path.resolve(__dirname, "../data/kattog.json");
 
 /**
  * Filter items by categories and return a object with arrays of items.

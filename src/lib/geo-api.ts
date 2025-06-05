@@ -1,4 +1,4 @@
-import rawJsonData from "../data/kattog.json";
+import rawJsonData from "../../data/kattog.json";
 import {
   RawItem,
   RawOptimizedData,

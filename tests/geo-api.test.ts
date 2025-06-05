@@ -1,7 +1,7 @@
 import { CategoryBase, CategoryCode } from "../src/lib/enums";
 import { GeoAPI } from "../src/lib/geo-api";
 import { Settlement } from "../src/lib/types";
-import rawData from "../src/data/kattog.json";
+import rawData from "../data/kattog.json";
 
 describe("GeoAPI (real data: kattog.json)", () => {
   let geo: GeoAPI;

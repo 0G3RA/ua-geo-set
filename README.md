@@ -6,7 +6,7 @@
 ### Key Characteristics
 
 - **Zero Dependencies**: Pure TypeScript implementation
-- **Lightweight**: Bundles only a minimal, index-based JSON (`raw-kattog.json`), optimized from the original KATOTTG dataset
+- **Lightweight**: Bundles only a minimal, index-based JSON (`kattog.json`), optimized from the original KATOTTG dataset
 - **Offline First**: No external network requests—everything works offline
 - **Type-Safe**: Full TypeScript support with proper interfaces [_Almost_]
 - **Universal**: Works in both Node.js and browser environments
@@ -46,9 +46,9 @@ The library is built on top of the official **KATOTTG 2024** dataset, which is m
 
 ### Data Processing Pipeline
 
-1. **Source Data**: Raw KATOTTG JSON from (`src/data/raw-kattog.json`)
+1. **Source Data**: Raw KATOTTG JSON from (`data/raw-kattog.json`)
 2. **Optimization**: Custom script (`scripts/optimize-kattog.ts`) transforms the data into a compact, index-based format
-3. **Output**: Optimized JSON (`src/data/kattog.json`) with minimal footprint and fast lookups
+3. **Output**: Optimized JSON (`data/kattog.json`) with minimal footprint and fast lookups
 
 > 💡 The optimization process reduces the original dataset size (9.7MB -> 2.3MB) while maintaining all essential information and relationships.
 
@@ -94,7 +94,7 @@ yarn add ua-geo-set
 
 ## Data Model & Categories
 
-The 2024 KATOTTG hierarchy is represented by a single JSON (`raw-kattog.json`) with two arrays:
+The 2024 KATOTTG hierarchy is represented by a single JSON (`kattog.json`) with two arrays:
 
 1. `indexToCode: string[]`
    - Maps each numeric index to a UA-code (e.g. "UA02000000000045678")
@@ -277,9 +277,10 @@ console.log(barSettlements.map(s => s.name)); // ["Бар", "Барок", "Ба�
 ## 🌳 Folder Structure
 ```
 ua-geo-set/
+├─ data/
+│ ├─ kattog.json # Compact, index-based JSON (KATOTTG 2024)
+│ └─ raw-kattog.json # Original (partially cleaned) JSON (KATOTTG 2024)
 ├─ src/
-│ ├─ data/
-│ │ └─ raw-kattog.json # Compact, index-based JSON (KATOTTG 2024)
 │ ├─ lib/
 │ │ ├─ enums.ts # CategoryCode, CategoryBase, KattogStructureType
 │ │ ├─ types.ts # RawItem, RawOptimizedData, Region, etc.
@@ -290,7 +291,7 @@ ua-geo-set/
 ├─ tests/
 │ └─ geo-api.test.ts # Jest tests for GeoAPI
 ├─ scripts/
-│ └─ convert-kattog.ts # Script to generate raw-kattog.json from kattog.json
+│ └─ optimize-kattog.ts # Script to generate kattog.json from raw-kattog.json
 ├─ README.md
 ├─ CHANGELOG.md
 ├─ package.json
