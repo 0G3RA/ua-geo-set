@@ -1,0 +1,15 @@
+src/data/raw-kattog.json
+
+node_modules/
+scripts/
+tests/
+tsconfig.json
+jest.config.js
+
+*.log
+*.test.ts
+*.spec.ts
+
+.vscode/
+.gitignore
+.eslintrc.js

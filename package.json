@@ -1,0 +1,57 @@
+{
+  "name": "ua-geo-set",
+  "version": "1.0.0",
+  "description": "UaGeoSet – чиста TypeScript-бібліотека з адміністративно-географічними даними України (регіони, райони, місця з координатами).",
+  "keywords": [
+    "ukraine",
+    "geo",
+    "dataset",
+    "administrative-boundaries",
+    "places",
+    "regions",
+    "districts",
+    "villages",
+    "cities"
+  ],
+  "author": "Oleh Herasymenko <olegyera@gmail.com>",
+  "homepage": "https://github.com/0G3RA/ua-geo-set",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "src/lib/",
+    "src/data/kattog.json",
+    "dist/**/*",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "pnpm run clean && tsc",
+    "prepare": "pnpm run build",
+    "lint": "eslint \"src/**/*.ts\" --fix",
+    "optimize": "ts-node scripts/optimize-kattog.ts",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0G3RA/ua-geo-set.git"
+  },
+  "type": "module",
+  "packageManager": "pnpm@10.11.0",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.15.29",
+    "@typescript-eslint/eslint-plugin": "^8.33.1",
+    "@typescript-eslint/parser": "^8.33.1",
+    "@eslint/js": "^9.0.0",
+    "typescript-eslint": "^7.0.0",
+    "eslint": "^9.0.0",
+    "jest": "^29.7.0",
+    "rimraf": "^6.0.1",
+    "ts-jest": "^29.3.4",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.5.0" 
+    }
+}
