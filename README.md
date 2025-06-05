@@ -41,12 +41,7 @@ The library provides access to the complete Ukrainian administrative hierarchy:
 8. [License](#license)
 
 
-
-## Overview
-
-
-
-## 📊 Data Source [](#-data-source)
+## 📊 Data Source
 The library is built on top of the official **KATOTTG 2024** dataset, which is maintained by [kaminarifox](https://github.com/kaminarifox/katottg-json). 
 
 ### Data Processing Pipeline
@@ -126,7 +121,7 @@ The 2024 KATOTTG hierarchy is represented by a single JSON (`raw-kattog.json`) w
 
 > Note: The older "Селища міського типу" (category **T**) _has been deprecated_ and merged into category X.
 
-## 🧑‍💻 Basic Usage [](#-basic-usage)
+## 🧑‍💻 Basic Usage
 
 #### Initializing the API:
 
