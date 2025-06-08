@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.2] – 2025-06-09
+### Added
+- Підтримку ECMAScript Modules (ESM).
+- Підтримку CommonJS.
+
+### Changed
+- Оновлено конфігурацію TypeScript (`tsconfig.cjs.json` та `tsconfig.esm.json`) для коректної збірки обох форматів.
+- Вдосконалено `package.json`:
+  - Поля `"main"` і `"module"` налаштовані відповідно під CommonJS та ESM.
+  - Секція `"exports"` адаптована під обидва формати модулів.
+- Спрощено скрипт `build` — тепер одночасно генерує CJS-, ESM-білди та копіює дані.
+
+---
+
 ## [1.0.1] – 2025-06-05
 ### Fixed / Internal
 - Перенесено `raw-kattog.json` та `kattog.json` з `src/data` до `data/raw-kattog.json` для того, щоб уникнути дублювання файлу в `dist/` і зменшити розмір пакета.

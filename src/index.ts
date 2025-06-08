@@ -1,1 +1,2 @@
-export * from "./lib/geo-api";
+export { GeoAPI } from "./lib/geo-api";
+export * from "./lib/types";
