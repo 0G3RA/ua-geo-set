@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.3] – 2025-06-09
+### Fixed / Internal
+- Додано копіювання kattog файлу до dist/data директоріїї.
+
+---
+
 ## [1.0.2] – 2025-06-09
 ### Added
 - Підтримку ECMAScript Modules (ESM).

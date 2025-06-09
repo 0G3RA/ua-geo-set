@@ -1,6 +1,6 @@
 {
   "name": "ua-geo-set",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "UaGeoSet – чиста TypeScript-бібліотека з адміністративно-географічними даними України (регіони, райони, місця з координатами).",
   "keywords": [
     "ua-geo",
@@ -23,9 +23,10 @@
   "license": "MIT",
   "scripts": {
     "clean": "rimraf dist",
+    "copy:data": "cpx \"data/kattog.json\" dist/data",
     "build:cjs": "tsc --project tsconfig.cjs.json",
     "build:esm": "tsc --project tsconfig.esm.json",
-    "build": "pnpm run clean && pnpm run build:cjs && pnpm run build:esm",
+    "build": "pnpm run clean && pnpm run build:cjs && pnpm run build:esm && pnpm run copy:data",
     "prepare": "pnpm run build",
     "lint": "eslint \"src/**/*.ts\" --fix",
     "optimize": "ts-node scripts/optimize-kattog.ts",
@@ -46,8 +47,8 @@
       "types": "./dist/types/index.d.ts"
     },
     "./data/kattog.json": {
-      "import": "./dist/data/kattog.json",
-      "require": "./dist/data/kattog.json"
+      "import": "./data/kattog.json",
+      "require": "./data/kattog.json"
     }
   },
   "files": [
